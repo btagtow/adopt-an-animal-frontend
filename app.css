@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Zhi+Mang+Xing&display=swap');
+
+#create-user{
+    display: none;
+}
+
+.page-header{
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    font-family: 'Zhi Mang Xing', cursive;
+    font-family: 'Lobster', cursive;
+
+}
+
+#nav-bar{
+    list-style: none;
+    display:flex; 
+    justify-content: space-between;
+    background-color:black;
+    color: white;
+}
+
+#new-user-form{
+    display:flex;
+    flex-direction: row; 
+}
+
+#featured-animal{
+    display:flex;
+    justify-content: center;
+}
+#featured-animal-h2{
+    display:flex;
+    justify-content: center;
+}
+#footer{
+    display:flex;
+    justify-content: center;
+    background-color: gray;
+    padding-top: 10px;
+    padding-bottom:10px;
+    padding-right: 0px;
+    padding-left: 10px;
+}
