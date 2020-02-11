@@ -5,6 +5,8 @@ const createUser = document.querySelector("#create-user")
 const signUpButton = document.querySelector("#sign-up-button")
 const userDropDown = document.querySelector('#user-dropdown')
 const newUserForm = document.querySelector("#new-user-form")
+const newUserPTag = document.querySelector("#new-user-p-tag")
+const goToUserPage = document.querySelector("#go-to-user-page")
 
 fetch("http://localhost:3000/animals")
     .then(response => response.json())
@@ -38,6 +40,10 @@ fetch("http://localhost:3000/users")
       userOption.innerText = user.name
       userOption.value = user.id 
       userDropDown.append(userOption)
+      
+      goToUserPage.addEventListener("click", () => {
+        window.location = `http://localhost:3001/user.html?id=${userDropDown.value}`
+      })
 
     }))
 

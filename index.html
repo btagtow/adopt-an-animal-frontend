@@ -14,18 +14,20 @@
     </header>
     <nav>
         <ul id="nav-bar">
-            <li>Current Users
-                <form action="http://localhost:3000/users" method="get"></form>
-                    <select name="name" id="user-dropdown"></select>
-                    <input type="submit" value="Go to user page">
-                </form>
-            </li>
-            <li>Available Pets</li>
+            <li id="current-users">Current Users</li>
+            <li>Browse Available Pets</li>
             <li>Colorado Shelters</li>
         </ul>
+        <!-- style="display: none" -->
+        <section id="current-user-select">             
+            <select name="name" id="user-dropdown"></select>
+            <input type="submit" value="Go to user page" id="go-to-user-page">
+        </section>  
+        </ul>
         <ul id="new-user-nav">
-            <li id="new-user-form">New User?
-                <form action="http://localhost:3000/users" method="POST" id="create-user">
+            <li id="new-user-form">
+                <p id="new-user-p-tag">New user?</p>
+                <form action="http://localhost:3000/users" method="POST" id="create-user" style="display: none";>
                     <input type="text" name="name" placeholder="Name">
                     <input type="text" name="email" placeholder="Email">
                     <input type="submit">
