@@ -2,7 +2,7 @@ const featuredAnimalContainer = document.querySelector(".featured-animal-contain
 const featuredAnimal = document.querySelector("#featured-animal")
 const createUser = document.querySelector("#create-user")
 const signUpButton = document.querySelector("#sign-up-button")
-
+//yo
 
 fetch("http://localhost:3000/animals")
     .then(response => response.json())
@@ -17,7 +17,9 @@ function displayAnimal(animal) {
     animalAge = document.createElement('h4')
     animalGender = document.createElement('h4')
     animalBreed = document.createElement('h4')
+
     image.src = animal.picture
+
     animalName.textContent = `Name: ${animal.name}`
     animalAge.textContent = `Age: ${animal.age}`
     animalGender.textContent = `Gender: ${animal.gender}`
