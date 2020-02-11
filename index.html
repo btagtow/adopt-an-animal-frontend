@@ -14,13 +14,17 @@
     </header>
     <nav>
         <ul id="nav-bar">
-            <li>Current Users</li>
+            <li>Current Users
+                <form action="http://localhost:3000/users" method="get"></form>
+                    <select name="name" id="user-dropdown"></select>
+                    <input type="submit" value="Go to user page">
+                </form>
+            </li>
             <li>Available Pets</li>
             <li>Colorado Shelters</li>
         </ul>
         <ul id="new-user-nav">
             <li id="new-user-form">New User?
-                <button id="sign-up-button">Sign Up Here</button>
                 <form action="http://localhost:3000/users" method="POST" id="create-user">
                     <input type="text" name="name" placeholder="Name">
                     <input type="text" name="email" placeholder="Email">
@@ -30,11 +34,11 @@
         </ul>
     </nav>
     <section class="featured-animal-container">
-        <h2 id="featured-animal-h2">Featured Animal:</h2>
+        <h2 id="featured-animal-h2"></h2>
         
         <section id="featured-animal">
-            <section id="featured-animal-info"></section>
         </section>
+        <section id="featured-animal-info"></section>
     </section>
     <footer id="footer">
         <p>Created with <i class="fa fa-heart"></i></p>

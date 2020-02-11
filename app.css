@@ -11,6 +11,9 @@ body{
     display: none;
 }
 
+#sign-up-button{
+    margin-left: 10px;
+}
 .page-header{
     display: flex;
     justify-content: center;
@@ -30,20 +33,36 @@ nav{
     justify-content: space-between;
     background-color:black;
     color: white;
+    margin-top:0px;
+    padding-top:5px;
+
 }
 
+#new-user-nav{
+    padding-bottom:5px;
+
+}
 #new-user-form{
     display:flex;
     flex-direction: row;
     color: white; 
+    cursor: pointer;
 }
 
+.featured-animal-container{
+    font-family: 'Montserrat', sans-serif;
+
+}
 #featured-animal{
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+#featured-animal-image{
+    height:28rem;
+}
+
 #featured-animal-h2{
     display:flex;
     justify-content: center;
@@ -56,7 +75,7 @@ nav{
     flex-direction: column;
     background-color: gray;
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     font-family: 'Pacifico', cursive;
@@ -65,6 +84,11 @@ nav{
 
 #footer p {
     margin: 0px;
+}
+
+#featured-animal-info{
+    display:flex; 
+    justify-content: space-around;
 }
 
 /* i.far.fa-heart {
