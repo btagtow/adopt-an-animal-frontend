@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster|Zhi+Mang+Xing&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body{
+    margin:0px;
+    background-color: lightskyblue;
+}
 
 #create-user{
     display: none;
@@ -10,7 +17,11 @@
     background-color: yellow;
     font-family: 'Zhi Mang Xing', cursive;
     font-family: 'Lobster', cursive;
+}
 
+nav{
+  background-color: black;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #nav-bar{
@@ -23,23 +34,41 @@
 
 #new-user-form{
     display:flex;
-    flex-direction: row; 
+    flex-direction: row;
+    color: white; 
 }
 
 #featured-animal{
     display:flex;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 #featured-animal-h2{
     display:flex;
     justify-content: center;
 }
-#footer{
-    display:flex;
-    justify-content: center;
+
+#footer {
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+    flex-direction: column;
     background-color: gray;
-    padding-top: 10px;
-    padding-bottom:10px;
-    padding-right: 0px;
-    padding-left: 10px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
 }
+
+#footer p {
+    margin: 0px;
+}
+
+/* i.far.fa-heart {
+    width: 56px;
+    height: 56px;
+    color: red;
+} */
