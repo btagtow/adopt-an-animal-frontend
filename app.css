@@ -10,6 +10,10 @@ body{
 #create-user{
     display: none;
 }
+#user-dropdown{
+    margin-top: 0px;
+    margin-left: 39px;
+}
 
 #sign-up-button{
     margin-left: 10px;
@@ -35,6 +39,7 @@ nav{
     color: white;
     margin-top:0px;
     padding-top:5px;
+    margin-bottom: 0px
 
 }
 
@@ -46,7 +51,12 @@ nav{
     display:flex;
     flex-direction: row;
     color: white; 
+}
+
+#new-user-p-tag{
+    margin: 0 0 0 0 ;
     cursor: pointer;
+
 }
 
 .featured-animal-container{
