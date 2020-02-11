@@ -13,10 +13,17 @@ fetch("http://localhost:3000/animals")
 
 function displayAnimal(animal) {
     image = document.createElement("img")
+    animalName = document.createElement('h2')
+    animalAge = document.createElement('h4')
+    animalGender = document.createElement('h4')
+    animalBreed = document.createElement('h4')
     image.src = animal.picture
-    featuredAnimal.appendChild(image)
+    animalName.textContent = `Name: ${animal.name}`
+    animalAge.textContent = `Age: ${animal.age}`
+    animalGender.textContent = `Gender: ${animal.gender}`
+    animalBreed.textContent = `Name: ${animal.breed}`
+    featuredAnimal.append(image, animalName, animalAge, animalGender, animalBreed)
 }
-
 
 signUpButton.addEventListener("click", myFunction)
 
