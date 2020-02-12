@@ -1,7 +1,7 @@
 const param = new URLSearchParams(window.location.search)
 const id = param.get('id')
 const userHeader = document.querySelector('.user-header');
-const 
+ 
 
 console.log(userHeader)
 
