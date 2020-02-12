@@ -10,10 +10,7 @@ body{
 #create-user{
     display: none;
 }
-#user-dropdown{
-    margin-top: 0px;
-    margin-left: 168px;
-}
+
 
 #sign-up-button{
     margin-left: 10px;
@@ -40,7 +37,8 @@ nav{
     margin-top:0px;
     padding-top:5px;
     padding-left:0px;
-    margin-bottom: 0px
+    margin-bottom: 0px;
+    height: 50px;
 
 }
 
@@ -63,8 +61,10 @@ nav{
 }
 
 .featured-animal-container{
+    display:flex;
     font-family: 'Montserrat', sans-serif;
-
+    justify-content: center;
+    flex-direction: column;
 }
 #featured-animal{
     display:flex;
@@ -102,6 +102,7 @@ nav{
 #featured-animal-info{
     display:flex; 
     justify-content: space-around;
+    text-align: center;
 }
 
 #current-users {
@@ -114,3 +115,8 @@ nav{
 #browse-pets{
     cursor: pointer;
 }
+.nav-li{
+    width: 25%;
+    text-align: center;
+}
+
