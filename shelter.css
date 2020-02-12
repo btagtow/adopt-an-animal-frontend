@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Zhi+Mang+Xing&display=swap');
+
+body{
+    margin:0px;
+    background-color: lightskyblue;
+}
+#page-header{
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    font-family: 'Zhi Mang Xing', cursive;
+    font-family: 'Lobster', cursive;
+}

@@ -6,7 +6,12 @@ const signUpButton = document.querySelector("#sign-up-button")
 const userDropDown = document.querySelector('#user-dropdown')
 const newUserForm = document.querySelector("#new-user-form")
 const newUserPTag = document.querySelector("#new-user-p-tag")
-const goToUserPage = document.querySelector("#go-to-user-page")
+const userPageButton = document.querySelector("#go-to-user-page")
+const currentUserLi = document.querySelector("#current-users")
+const currentUserSelect = document.querySelector("#current-user-select")
+const currentUserSelectContainer = document.querySelector("#current-user-select-container")
+const shelterLink = document.querySelector("#colorado-shelters")
+const petsLink = document.querySelector("#browse-pets")
 
 fetch("http://localhost:3000/animals")
     .then(response => response.json())
@@ -40,23 +45,38 @@ fetch("http://localhost:3000/users")
       userOption.innerText = user.name
       userOption.value = user.id 
       userDropDown.append(userOption)
-      
-      goToUserPage.addEventListener("click", () => {
-        window.location = `http://localhost:3001/user.html?id=${userDropDown.value}`
-      })
 
     }))
 
+userPageButton.addEventListener("click", goToUserPage)
+shelterLink.addEventListener('click', goToShelterPage)
+petsLink.addEventListener('click', goToAvailablePets)
 
+function goToUserPage(){
+  window.location = `http://localhost:3001/user.html?id=${userDropDown.value}`
+}
+
+function goToShelterPage(){
+  window.location = `http://localhost:3001/shelter.html`
+}
+
+function goToAvailablePets(){
+  window.location = `http://localhost:3001/pets.html`
+}
 
 newUserForm.addEventListener("click", () => {
-  myFunction()
+  hideElement(createUser)
 })
 
-function myFunction() {
-    if (createUser.style.display === "none") {
-      createUser.style.display = "block";
+currentUserLi.addEventListener("click", () => {
+  hideElement(currentUserSelect)
+})
+
+
+function hideElement(element) {
+    if (element.style.display === "none") {
+      element.style.display = "block";
     } else {
-      createUser.style.display = "none";
+      element.style.display = "none";
     }
 }

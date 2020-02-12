@@ -12,7 +12,7 @@ body{
 }
 #user-dropdown{
     margin-top: 0px;
-    margin-left: 39px;
+    margin-left: 168px;
 }
 
 #sign-up-button{
@@ -34,11 +34,12 @@ nav{
 #nav-bar{
     list-style: none;
     display:flex; 
-    justify-content: space-between;
+    justify-content: space-around;
     background-color:black;
     color: white;
     margin-top:0px;
     padding-top:5px;
+    padding-left:0px;
     margin-bottom: 0px
 
 }
@@ -51,11 +52,13 @@ nav{
     display:flex;
     flex-direction: row;
     color: white; 
+    padding-left:130px;
 }
 
 #new-user-p-tag{
     margin: 0 0 0 0 ;
     cursor: pointer;
+    margin-right: 10px;
 
 }
 
@@ -101,8 +104,13 @@ nav{
     justify-content: space-around;
 }
 
-/* i.far.fa-heart {
-    width: 56px;
-    height: 56px;
-    color: red;
-} */
+#current-users {
+    cursor: pointer;
+}
+
+#colorado-shelters{
+    cursor: pointer;
+}
+#browse-pets{
+    cursor: pointer;
+}

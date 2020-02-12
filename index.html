@@ -15,14 +15,15 @@
     <nav>
         <ul id="nav-bar">
             <li id="current-users">Current Users</li>
-            <li>Browse Available Pets</li>
-            <li>Colorado Shelters</li>
+            <li id="browse-pets">Browse Available Pets</li>
+            <li id="colorado-shelters">Colorado Shelters</li>
         </ul>
-        <!-- style="display: none" -->
-        <section id="current-user-select">             
-            <select name="name" id="user-dropdown"></select>
-            <input type="submit" value="Go to user page" id="go-to-user-page">
-        </section>  
+        <section id="current-user-select-container"> 
+            <section id="current-user-select" style="display:none">            
+                <select name="name" id="user-dropdown"></select>
+                <input type="submit" value="Go to user page" id="go-to-user-page">
+            </section>  
+        </section>
         </ul>
         <ul id="new-user-nav">
             <li id="new-user-form">
