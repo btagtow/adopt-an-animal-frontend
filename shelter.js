@@ -1,6 +1,7 @@
 const shelterContainer = document.querySelector(".shelter-container") 
 const petsLink = document.querySelector("#browse-pets")
 const home = document.querySelector('#home')
+const footer = document.querySelector('#footer')
 const currentUser = document.querySelector("#current-users")
 const currentUserSelect = document.querySelector("#current-user-select")
 const currentUserSelectContainer = document.querySelector("#current-user-select-container")
@@ -14,12 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
     userPageButton.addEventListener("click", goToUserPage)
     createUserOptions()
     petsLink.addEventListener('click', goToAvailablePets)
+    fetchShelters()
     
 })
 
-fetch('http://localhost:3000/shelters')
-    .then(response => response.json())
-    .then(shelterDetails)
+function fetchShelters(){
+    fetch('http://localhost:3000/shelters')
+        .then(response => response.json())
+        .then(shelterDetails)
+}
+
     
 
 

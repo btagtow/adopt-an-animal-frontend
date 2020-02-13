@@ -1,11 +1,13 @@
 const featuredAnimalContainer = document.querySelector(".featured-animal-container")
 const featuredAnimal = document.querySelector("#featured-animal")
 const featuredAnimalInfo = document.querySelector("#featured-animal-info")
+const featuredAnimalH2 = document.querySelector("#featured-animal-h2")
 const createUser = document.querySelector("#create-user")
 const signUpButton = document.querySelector("#sign-up-button")
 const userDropDown = document.querySelector('#user-dropdown')
 const newUserForm = document.querySelector("#new-user-form")
 const newUserNav = document.querySelector("#new-user-nav")
+const newUserText = document.querySelector("#new-user-text")
 const userPageButton = document.querySelector("#go-to-user-page")
 const currentUserLi = document.querySelector("#current-users")
 const currentUserSelect = document.querySelector("#current-user-select")
@@ -20,9 +22,9 @@ fetch("http://localhost:3000/animals")
         displayAnimal(randomAnimal)
     })
 
+
 function displayAnimal(animal) {
     image = document.createElement("img")
-    featuredAnimalH2 = document.querySelector("#featured-animal-h2")
     animalAge = document.createElement('h4')
     animalGender = document.createElement('h4')
     animalBreed = document.createElement('h4')
@@ -75,8 +77,6 @@ currentUserLi.addEventListener("click", () => {
 
 function hideElement(element) {
     if (element.style.display === "none") {
-      element.style.display = "block";
-    } else {
-      element.style.display = "none";
+      element.style.display = "flex";
     }
 }

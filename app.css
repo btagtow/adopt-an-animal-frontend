@@ -6,9 +6,24 @@ body{
     margin:0px;
     background-color: lightskyblue;
 }
+main{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    padding-bottom: 70px;
+
+}
 
 #create-user{
-    display: none;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 15%;
+}
+
+#current-user-select{
+    display:flex;
+    justify-content: center;
 }
 
 
@@ -30,19 +45,29 @@ nav{
   font-family: 'Montserrat', sans-serif;
 }
 
+li{
+    list-style: none;
+}
 #nav-bar{
     list-style: none;
     display:flex; 
-    justify-content: space-around;
+    justify-content: center;
     background-color:black;
     color: white;
     margin-top:0px;
     padding-top:5px;
-    padding-left:0px;
     margin-bottom: 0px;
     height: 50px;
+    padding-right: 5%;
+
 
 }
+.nav-option{
+    cursor: pointer;
+    width: 20%;
+    text-align: center;
+}
+
 
 #new-user-nav{
     padding-bottom:5px;
@@ -50,38 +75,37 @@ nav{
 }
 #new-user-form{
     display:flex;
-    flex-direction: row;
     color: white; 
-    padding-left:130px;
+    text-align:center;
 }
 
-#new-user-p-tag{
-    margin: 0 0 0 0 ;
-    cursor: pointer;
-    margin-right: 10px;
-
-}
 
 .featured-animal-container{
     display:flex;
     font-family: 'Montserrat', sans-serif;
-    justify-content: center;
     flex-direction: column;
 }
 #featured-animal{
     display:flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
-#featured-animal-image{
-    height:28rem;
-}
-
 #featured-animal-h2{
+    padding-bottom: 2%;
     display:flex;
     justify-content: center;
 }
+#featured-animal-image{
+    height:28rem;
+    border-radius: 50px;
+}
+#featured-animal-info{
+    display:flex; 
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 2%;
+}
+
 
 #footer {
     display: flex;
@@ -101,19 +125,6 @@ nav{
     margin: 0px;
 }
 
-#featured-animal-info{
-    display:flex; 
-    justify-content: space-around;
-    text-align: center;
-}
-
-.nav-li{
-    cursor: pointer;
-}
-.nav-li{
-    width: 25%;
-    text-align: center;
-}
 
 h4{
     width:33%;
