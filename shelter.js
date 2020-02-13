@@ -1,37 +1,56 @@
-const shelterCard = document.querySelector('shelter-card')
+const shelterContainer = document.querySelector(".shelter-container") 
+const petsLink = document.querySelector("#browse-pets")
 const home = document.querySelector('#home')
 const currentUser = document.querySelector("#current-users")
 const currentUserSelect = document.querySelector("#current-user-select")
 const currentUserSelectContainer = document.querySelector("#current-user-select-container")
-
 const userDropDown = document.querySelector('#user-dropdown')
-
-
-console.log(shelterCard)
+const createUser = document.querySelector("#create-user")
+const newUserNav = document.querySelector("#new-user-nav")
+const userPageButton = document.querySelector("#go-to-user-page")
 
 document.addEventListener('DOMContentLoaded', () => {
     home.addEventListener("click", goHome)
-    currentUser.addEventListener('click', () => {
-        createUserOptions()
-        appendUserOptions(userOption)
-    })
+    userPageButton.addEventListener("click", goToUserPage)
+    createUserOptions()
+    petsLink.addEventListener('click', goToAvailablePets)
     
 })
 
 fetch('http://localhost:3000/shelters')
     .then(response => response.json())
-    .then(shelters => {
-        shelterDetails(shelters)
-        
-    })
+    .then(shelterDetails)
+    
 
 
 
 function shelterDetails(shelters){
-    shelters.map(shelter => {
-        
+    shelters.forEach(shelterCardCreator)
+}
+
+function shelterCardCreator(shelter){
+    let shelterCard = document.createElement('shelter-card')
+    shelterCard.className = 'shelter-card'
+    shelterCard.id = shelter.id
+    let shelterClicker = document.createElement('section')
+    let shelterName = document.createElement('h3')
+    let shelterImage = document.createElement('img')
+    let shelterMap = document.createElement('h5')
+    shelterMap.innerHTML = `<a href="https://www.google.com/maps/place/${shelter.address}">${shelter.address}<a/>`
+    shelterMap.className = 'shelter-map'
+    shelterImage.src = shelter.image
+    shelterImage.className = "shelter-image"
+    shelterClicker.className = "shelter-clicker"
+    shelterName.innerText = shelter.name
+    shelterCard.append(shelterClicker, shelterMap)
+    shelterClicker.append(shelterName, shelterImage)
+    shelterContainer.append(shelterCard)
+    shelterClicker.addEventListener('click', () => {
+        visitShelterWebsite(shelter)
+
     })
 }
+
 function goHome(){
     window.location = "http://localhost:3001/"
 }
@@ -48,15 +67,38 @@ function createUserOptions(){
 }
 
 
+function goToUserPage(){
+  window.location = `http://localhost:3001/user.html?id=${userDropDown.value}`
+}
+
+function goToShelterPage(){
+  window.location = `http://localhost:3001/shelter.html`
+}
+
+function goToAvailablePets(){
+  window.location = `http://localhost:3001/pets.html`
+}
+
+
 currentUser.addEventListener("click", () => {
     hideElement(currentUserSelect)
   })
+
+newUserNav.addEventListener("click", () => {
+    hideElement(createUser)
+})
+
   
   
 function hideElement(element) {
     if (element.style.display === "none") {
     element.style.display = "block";
-    } else {
-    element.style.display = "none";
     }
+}
+
+function visitShelterWebsite(shelter){
+    window.location = `${shelter.link}`
+}
+function searchShelterAddress(shelter){
+    document.window = `${shelter.address}`
 }

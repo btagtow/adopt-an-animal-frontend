@@ -5,7 +5,7 @@ const createUser = document.querySelector("#create-user")
 const signUpButton = document.querySelector("#sign-up-button")
 const userDropDown = document.querySelector('#user-dropdown')
 const newUserForm = document.querySelector("#new-user-form")
-const newUserPTag = document.querySelector("#new-user-p-tag")
+const newUserNav = document.querySelector("#new-user-nav")
 const userPageButton = document.querySelector("#go-to-user-page")
 const currentUserLi = document.querySelector("#current-users")
 const currentUserSelect = document.querySelector("#current-user-select")
@@ -64,7 +64,7 @@ function goToAvailablePets(){
   window.location = `http://localhost:3001/pets.html`
 }
 
-newUserForm.addEventListener("click", () => {
+newUserNav.addEventListener("click", () => {
   hideElement(createUser)
 })
 
