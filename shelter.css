@@ -29,11 +29,30 @@ nav{
       padding-top:5px;
       padding-left:5%;
       margin-bottom: 0px;
+      height: 50px;
+
   
 }
 .nav-option{
     cursor: pointer;
 }
+.nav-option{
+    width: 25%;
+    text-align: center;
+}
+#new-user-form{
+    list-style: none;
+}
+.shelter-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.shelter-details{
+    color:red;
+    
+}
+
 #footer {
     display: flex;
     align-items: center;
