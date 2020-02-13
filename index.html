@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
     <title>Flatiron School Denver Adoptable Animal Finder</title>
+    <script src="app.js" defer></script>
+
 </head>
 <body>
     <header class="page-header">
@@ -13,9 +15,18 @@
     <main>
         <nav>
             <ul id="nav-bar">
+                <ul id="new-user-nav" class="nav-li">New user?
+                    <li id="new-user-form">
+                        <form action="http://localhost:3000/users" method="POST" id="create-user" style="display: none";>
+                            <input type="text" name="name" placeholder="Name">
+                            <input type="text" name="email" placeholder="Email">
+                            <input type="submit">
+                        </form>
+                    </li>
+                </ul>
                 <li id="current-users" class="nav-li">Current Users
                     <section id="current-user-select-container"> 
-                        <section id="current-user-select" style="display:none">            
+                        <section id="current-user-select" display= "none">            
                             <select name="name" id="user-dropdown"></select>
                             <input type="submit" value="Go to user page" id="go-to-user-page">
                         </section>  
@@ -23,7 +34,6 @@
                 </li>
                 <li id="browse-pets" class="nav-li">Browse Available Pets</li>
                 <li id="colorado-shelters" class="nav-li">Colorado Shelters</li>
-            
                 <ul id="new-user-nav" class="nav-li">
                     <li id="new-user-form">
                         <p id="new-user-p-tag">New user?</p>
@@ -44,10 +54,9 @@
             <section id="featured-animal-info"></section>
         </section>
     </main>
-    <footer id="footer">
-        <p>Created with <i class="fa fa-heart"></i></p>
-        <p>By Evan Greer and Ben Tagtow</p>
-    </footer>
-    <script src="app.js"></script>
 </body>
+            <footer id="footer">
+                <p>Created with <i class="fa fa-heart"></i></p>
+                <p>By Evan Greer and Ben Tagtow</p>
+            </footer>
 </html>
