@@ -11,31 +11,29 @@
     <header class="page-header">
         <h1>Browse Available Pets</h1>
     </header>
-    <main>
-        <nav>
-            <ul id="nav-bar">
-                <li id="home" class="nav-option">Home</li>
-                <ul id="new-user-nav" class="nav-option">New user?
-                    <li id="new-user-form">
-                        <form action="http://localhost:3000/users" method="POST" id="create-user" style="display: none";>
-                            <input type="text" name="name" placeholder="Name">
-                            <input type="text" name="email" placeholder="Email">
-                            <input type="submit" id="submit">
-                        </form>
-                    </li>
-                </ul>
-                <li id="current-users" class="nav-option">
-                    Current Users
-                        <section id="current-user-select" style="display:none">            
-                            <select name="name" id="user-dropdown"></select>
-                            <input type="submit" value="Go to user page" id="go-to-user-page">
-                        </section>  
+    <nav>
+        <ul id="nav-bar">
+            <li id="home" class="nav-option">Home</li>
+            <ul id="new-user-nav" class="nav-option">New user?
+                <li id="new-user-form">
+                    <form action="http://localhost:3000/users" method="POST" id="create-user" style="display: none";>
+                        <input type="text" name="name" placeholder="Name">
+                        <input type="text" name="email" placeholder="Email">
+                        <input type="submit" id="submit">
+                    </form>
                 </li>
-                <li id="colorado-shelters" class="nav-option">Colorado Shelters</li>
-
             </ul>
+            <li id="current-users" class="nav-option"> Current Users
+                    <section id="current-user-select" style="display:none">            
+                        <select name="name" id="user-dropdown"></select>
+                        <input type="submit" value="Go to user page" id="go-to-user-page">
+                    </section>  
+            </li>
+            <li id="colorado-shelters" class="nav-option">Colorado Shelters</li>
+        </ul>
+    </nav>
+    <main>
     
-        </nav>
         <section id="available-animals-container"></section>
     </main>
     <footer id="footer">
