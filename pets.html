@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Browse Available Pets</title>
+</head>
+<body>
+    <header class="page-header">
+        <h1>Browse Available Pets</h1>
+    </header>
+    <main>
+        <nav>
+            <ul id="nav-bar">
+                <li id="home-page" class="nav-li">Home Page</li>
+                <li id="current-users" class="nav-li">Current Users
+                    <section id="current-user-select" style="display:none">
+                        <select name="name" id="user-dropdown"></select>
+                        <input type="submit" value="Go to user page" id="go-to-user-page">
+                    </section>
+                </li>
+                <li id="colorado-shelters" class="nav-li">Colorado Shelters</li>
+                <li id="new-user-nav" class="nav-li">
+                    <li id="new-user-form">
+                        <p id="new-user-p-tag">New User?</p>
+                        <form action="http://localhost:3000/users" method="POST" id="create-user" style="display:hidden">
+                            <input type="text" name="name" placeholder="Name">
+                            <input type="text" name="email" placeholder="Email">
+                            <input type="submit">
+                        </form>
+                    </li>
+                </li>
+            </ul>
+
+        </nav>
+        <section id="available-animals-container"></section>
+    </main>
+    <footer id="footer">
+        <p>Created with <i class="fa fa-heart"></i></p>
+        <p>By Evan Greer and Ben Tagtow</p>
+    </footer>
+    <script src="pets.js"></script>
+</body>
+</html>

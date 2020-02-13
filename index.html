@@ -34,7 +34,16 @@
                 </li>
                 <li id="browse-pets" class="nav-li">Browse Available Pets</li>
                 <li id="colorado-shelters" class="nav-li">Colorado Shelters</li>
-        
+                <ul id="new-user-nav" class="nav-li">
+                    <li id="new-user-form">
+                        <p id="new-user-p-tag">New user?</p>
+                        <form action="http://localhost:3000/users" method="POST" id="create-user" style="display: hidden";>
+                            <input type="text" name="name" placeholder="Name">
+                            <input type="text" name="email" placeholder="Email">
+                            <input type="submit">
+                        </form>
+                    </li>
+                </ul>
             </ul>
         </nav>
         <section class="featured-animal-container">

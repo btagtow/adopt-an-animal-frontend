@@ -7,12 +7,19 @@ body{
     background-color: lightskyblue;
 }
 
+.page-header{
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    font-family: 'Lobster', cursive;
+}
+
 nav{
     background-color: black;
     font-family: 'Montserrat', sans-serif;
 }
 
-#nav-bar, #add-favorite{
+#nav-bar{
     list-style: none;
     display:flex; 
     justify-content: space-around;
@@ -21,22 +28,43 @@ nav{
     margin-top:0px;
     padding-top:5px;
     padding-left:0px;
-    margin-bottom: 0px
+    margin-bottom: 0px;
+    height: 50px;
 }
 
-.user-header{
-    display: flex;
-    justify-content: center;
-    background-color: yellow;
-    font-family: 'Zhi Mang Xing', cursive;
-    font-family: 'Lobster', cursive;
+.nav-li{
+    width: 25%;
+    text-align: center;
 }
 
-#favorite-animals-container{
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    width: 50%;
+#new-user-nav {
+    padding-bottom: 5px;
+}
+
+#new-user-p-tag{
+    margin: 0 0 0 0 ;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#new-user-form{
+    display:flex;
+    flex-direction: row;
+    color: white; 
+    padding-left:130px;
+    cursor: pointer;
+}
+
+#home-page {
+    cursor: pointer;
+}
+
+#current-users{
+    cursor: pointer;
+}
+
+#colorado-shelters{
+    cursor: pointer;
 }
 
 #footer {
@@ -55,20 +83,4 @@ nav{
 
 #footer p {
     margin: 0px;
-}
-
-#home-page {
-    cursor: pointer;
-}
-
-#colorado-shelters{
-    cursor: pointer;
-}
-#browse-pets{
-    cursor: pointer;
-}
-
-.nav-li{
-    width: 33%;
-    text-align: center;
 }
