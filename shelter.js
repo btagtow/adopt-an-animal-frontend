@@ -20,25 +20,35 @@ document.addEventListener('DOMContentLoaded', () => {
 fetch('http://localhost:3000/shelters')
     .then(response => response.json())
     .then(shelterDetails)
+    
 
 
 
 function shelterDetails(shelters){
-    shelters.map(
-        getShelterName
-    )
+    shelters.forEach(shelterCardCreator)
 }
 
-function getShelterName(shelter){
+function shelterCardCreator(shelter){
     let shelterCard = document.createElement('shelter-card')
+    shelterCard.className = 'shelter-card'
+    shelterCard.id = shelter.id
+    let shelterClicker = document.createElement('section')
     let shelterName = document.createElement('h3')
-    shelterName.innerText = shelter.name 
-    shelterCard.className = 'shelter-details'
-    shelterCard.append(shelterName)
-    let shelterLink = document.createElement('h3')
-    shelterLink.innerText = shelter.link 
+    let shelterImage = document.createElement('img')
+    let shelterMap = document.createElement('h5')
+    shelterMap.innerHTML = `<a href="https://www.google.com/maps/place/${shelter.address}">${shelter.address}<a/>`
+    shelterMap.className = 'shelter-map'
+    shelterImage.src = shelter.image
+    shelterImage.className = "shelter-image"
+    shelterClicker.className = "shelter-clicker"
+    shelterName.innerText = shelter.name
+    shelterCard.append(shelterClicker, shelterMap)
+    shelterClicker.append(shelterName, shelterImage)
     shelterContainer.append(shelterCard)
-    shelterCard.append(shelterLink)
+    shelterClicker.addEventListener('click', () => {
+        visitShelterWebsite(shelter)
+
+    })
 }
 
 function goHome(){
@@ -84,4 +94,11 @@ function hideElement(element) {
     if (element.style.display === "none") {
     element.style.display = "block";
     }
+}
+
+function visitShelterWebsite(shelter){
+    window.location = `${shelter.link}`
+}
+function searchShelterAddress(shelter){
+    document.window = `${shelter.address}`
 }
