@@ -14,45 +14,69 @@ body{
     font-family: 'Lobster', cursive;
 }
 
-nav{
-    background-color: black;
-    font-family: 'Montserrat', sans-serif;
+#create-user{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 15%;
 }
 
+#current-user-select{
+    display:flex;
+    justify-content: center;
+}
+
+
+#sign-up-button{
+    margin-left: 10px;
+}
+.page-header{
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    font-family: 'Lobster', cursive;
+    width:100%;
+    top:0;
+
+}
+
+nav{
+  background-color: black;
+  font-family: 'Montserrat', sans-serif;
+}
+
+li{
+    list-style: none;
+}
 #nav-bar{
     list-style: none;
     display:flex; 
-    justify-content: space-around;
+    justify-content: center;
     background-color:black;
     color: white;
     margin-top:0px;
     padding-top:5px;
-    padding-left:0px;
     margin-bottom: 0px;
     height: 50px;
-}
+    padding-right: 5%;
 
-.nav-li{
-    width: 25%;
+
+}
+.nav-option{
+    cursor: pointer;
+    width: 20%;
     text-align: center;
 }
 
-#new-user-nav {
-    padding-bottom: 5px;
-}
 
-#new-user-p-tag{
-    margin: 0 0 0 0 ;
-    cursor: pointer;
-    margin-right: 10px;
-}
+#new-user-nav{
+    padding-bottom:5px;
 
+}
 #new-user-form{
     display:flex;
-    flex-direction: row;
     color: white; 
-    padding-left:130px;
-    cursor: pointer;
+    text-align:center;
 }
 
 #home-page {

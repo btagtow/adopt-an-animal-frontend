@@ -1,4 +1,4 @@
-const homePageLink = document.querySelector('#home-page');
+const homePageLink = document.querySelector('#home');
 const coloradoSheltersLink = document.querySelector('#colorado-shelters');
 
 const currentUserLi = document.querySelector("#current-users");
@@ -6,12 +6,16 @@ const currentUserSelect = document.querySelector("#current-user-select");
 const currentUserSelectContainer = document.querySelector("#current-user-select-container");
 const userDropDown = document.querySelector('#user-dropdown')
 const userPageButton = document.querySelector('#go-to-user-page')
+const newUserSubmit = document.querySelector('#submit')
 
 const createUser = document.querySelector('#create-user')
-const newUserForm = document.querySelector('#new-user-form')
+const newUserNav = document.querySelector('#new-user-nav')
 
 homePageLink.addEventListener("click", goToHomePage)
 coloradoSheltersLink.addEventListener("click", goToSheltersPage)
+newUserNav.addEventListener("click", () => {
+    hideElement(createUser)
+  })
 
 usersURL = "http://localhost:3000/users"
 
@@ -24,10 +28,6 @@ currentUserLi.addEventListener("click", () => {
 })
 
 userPageButton.addEventListener('click', goToUserPage)
-
-newUserForm.addEventListener("click", () => {
-    hideElement(createUser)
-})
 
 function parseJSON(response) {
     return response.json()    
@@ -59,8 +59,10 @@ function goToUserPage(){
 function hideElement(element) {
     if (element.style.display == "none") {
         element.style.display = "block";
-    } else {
-        element.style.display = "none";
     }
 }
 
+
+function goToAvailablePets(){
+    window.location = `http://localhost:3001/pets.html`
+  }

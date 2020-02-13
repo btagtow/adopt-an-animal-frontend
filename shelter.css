@@ -22,7 +22,7 @@ nav{
 #nav-bar{
       list-style: none;
       display:flex; 
-      justify-content: space-around;
+      justify-content: space-between;
       background-color:black;
       color: white;
       margin-top:0px;
