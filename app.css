@@ -20,6 +20,9 @@ body{
     justify-content: center;
     background-color: yellow;
     font-family: 'Lobster', cursive;
+    width:100%;
+    top:0;
+
 }
 
 nav{
@@ -104,14 +107,7 @@ nav{
     text-align: center;
 }
 
-#current-users {
-    cursor: pointer;
-}
-
-#colorado-shelters{
-    cursor: pointer;
-}
-#browse-pets{
+.nav-li{
     cursor: pointer;
 }
 .nav-li{
@@ -119,3 +115,7 @@ nav{
     text-align: center;
 }
 
+h4{
+    width:33%;
+    text-align: center;
+}
