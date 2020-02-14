@@ -16,14 +16,17 @@ main{
 
 #create-user{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     margin-left: 15%;
+    font-family: 'Montserrat', sans-serif;
+
+    color: black;
 }
 
 #current-user-select{
     display:flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 
@@ -73,6 +76,13 @@ li{
     padding-bottom:5px;
 
 }
+
+#forms-container{
+    display:flex; 
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 10rem;
+}
 #new-user-form{
     display:flex;
     color: white; 
@@ -82,9 +92,13 @@ li{
 
 .featured-animal-container{
     display:flex;
+    flex-direction: row;
+    justify-content: center;
     font-family: 'Montserrat', sans-serif;
-    flex-direction: column;
+
+
 }
+
 #featured-animal{
     display:flex;
     align-items: center;
@@ -94,16 +108,19 @@ li{
     padding-bottom: 2%;
     display:flex;
     justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+
 }
 #featured-animal-image{
     height:28rem;
     border-radius: 50px;
+    position:static;
 }
 #featured-animal-info{
     display:flex; 
-    justify-content: space-around;
-    text-align: center;
+    flex-direction: column;
     padding-top: 2%;
+    margin-left: 10rem;
 }
 
 
@@ -123,10 +140,4 @@ li{
 
 #footer p {
     margin: 0px;
-}
-
-
-h4{
-    width:33%;
-    text-align: center;
 }
