@@ -15,36 +15,39 @@
         <nav>
             <ul id="nav-bar">
                 <ul id="new-user-nav" class="nav-option">New user?
-                    <li id="new-user-form">
-                        <form action="http://localhost:3000/users" method="POST" id="create-user" style="display: none";>
+                </ul>
+                <li id="current-users" class="nav-option">Current Users
+                </li>
+                <li id="browse-pets" class="nav-option">Browse Available Pets</li>
+                <li id="colorado-shelters" class="nav-option">Colorado Shelters</li>
+                
+            </ul>
+            
+        </nav>
+        <main>
+
+            <h2 id="featured-animal-h2"></h2>
+            <section class="featured-animal-container">
+                <section id = "forms-container">
+                    <section id="current-user-select" style="display:none">
+                        Current User:
+                        <select name="name" id="user-dropdown"></select>
+                        <input type="submit" value="Go to user page" id="go-to-user-page">
+                    </section>  
+                    <li id="new-user-form"> 
+                        <form action="http://localhost:3000/users" method="POST" id="create-user" style="display: none";>New User: 
                             <input type="text" name="name" placeholder="Name">
                             <input type="text" name="email" placeholder="Email">
                             <input type="submit">
                         </form>
                     </li>
-                </ul>
-                <li id="current-users" class="nav-option">
-                    Current Users
-                        <section id="current-user-select" style="display:none">            
-                            <select name="name" id="user-dropdown"></select>
-                            <input type="submit" value="Go to user page" id="go-to-user-page">
-                        </section>  
-                </li>
-                <li id="browse-pets" class="nav-option">Browse Available Pets</li>
-                <li id="colorado-shelters" class="nav-option">Colorado Shelters</li>
-
-            </ul>
-    
-        </nav>
-    <main>
-
-        <section class="featured-animal-container">
-            <h2 id="featured-animal-h2"></h2>
-            
-            <section id="featured-animal">
+                </section>
+                <section id="featured-animal">
+                </section>
+                <section id="featured-animal-info"></section>
             </section>
-            <section id="featured-animal-info"></section>
-        </section>
+
+                        
     </main>
 </body>
             <footer id="footer">
