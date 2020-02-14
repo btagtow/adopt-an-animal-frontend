@@ -32,6 +32,13 @@ nav{
     font-family: 'Lobster', cursive;
 }
 
+main{
+    padding-top: 30px;
+    display:flex;
+    justify-content: center;
+    padding-bottom: 70px;
+}
+
 #favorite-animals-container{
     display: flex;
     align-content: center;
