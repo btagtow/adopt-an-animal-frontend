@@ -2,12 +2,14 @@ const featuredAnimalContainer = document.querySelector(".featured-animal-contain
 const featuredAnimal = document.querySelector("#featured-animal")
 const featuredAnimalInfo = document.querySelector("#featured-animal-info")
 const featuredAnimalH2 = document.querySelector("#featured-animal-h2")
+const image = document.createElement("img")
 const createUser = document.querySelector("#create-user")
 const signUpButton = document.querySelector("#sign-up-button")
 const userDropDown = document.querySelector('#user-dropdown')
 const newUserForm = document.querySelector("#new-user-form")
 const newUserNav = document.querySelector("#new-user-nav")
 const newUserText = document.querySelector("#new-user-text")
+const newUserSubmit = document.querySelector("#new-user-submit")
 const userPageButton = document.querySelector("#go-to-user-page")
 const currentUserLi = document.querySelector("#current-users")
 const currentUserSelect = document.querySelector("#current-user-select")
@@ -25,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
   userPageButton.addEventListener("click", goToUserPage)
   shelterLink.addEventListener('click', goToShelterPage)
   petsLink.addEventListener('click', goToAvailablePets)
+
+  
   fetchAnimals()
   fetchUsers()
 
@@ -38,35 +42,37 @@ function fetchAnimals(){
       .then(animals => {
           randomAnimal = animals[Math.floor(Math.random() * animals.length)]
           displayAnimal(randomAnimal)
+
+          image.addEventListener('click', () => {
+            displayAnimal(animals[Math.floor(Math.random() * animals.length)])
+          })
       })
 }
 
-
-
+function generateRando(animals){
+  randomAnimal = animals[Math.floor(Math.random() * animals.length)]
+}
 
 function displayAnimal(animal) {
     featuredAnimal.innerHTML = ""
-    image = document.createElement("img")
+    featuredAnimalInfo.innerHTML = ""
+
     animalAge = document.createElement('h4')
     animalGender = document.createElement('h4')
     animalBreed = document.createElement('h4')
-
-    image.src = animal.picture
+  
     image.id="featured-animal-image"
-
+    image.src = animal.picture
     featuredAnimalH2.innerText = `Featured Animal: ${animal.name}`
+
     animalAge.textContent = `Age: ${animal.age}`
     animalGender.textContent = `Gender: ${animal.gender}`
     animalBreed.textContent = `Breed: ${animal.breed}`
+
     featuredAnimal.append(image)
     featuredAnimalInfo.append(animalAge, animalGender, animalBreed)
 }
 
-image.addEventListener('click', refreshAnimal())
-
-function refreshAnimal(){
-  console.log()
-}
 
 
 function fetchUsers(){

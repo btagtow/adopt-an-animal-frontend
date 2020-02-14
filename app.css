@@ -115,10 +115,11 @@ li{
     flex-direction: column;
 }
 #featured-animal-h2{
-    padding-bottom: 2%;
     display:flex;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
+    margin-top: 25px;
+    margin-bottom: 0;
 
 }
 #featured-animal-image{
