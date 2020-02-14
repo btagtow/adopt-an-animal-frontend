@@ -76,7 +76,7 @@ function addAnimal(animals){
         updateForm.action = `http://localhost:3000/animals/${animal.id}`
         updateForm.method = "POST"
         updateForm.innerHTML = `
-        <input type = "submit" name = "status" value = "Adopt">
+        <input type = "submit" name = "status" value = "Adopted">
         <input type = "hidden" name = "_method" value = "put">
         `        
 

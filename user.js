@@ -71,6 +71,13 @@ function displayUser(user) {
         
         animalContainer.append(animalImageContainer, animalDetailsContainer) 
         favoriteAnimalsContainer.append(animalContainer)
+        
+        if (animal.status.toUpperCase() === "AVAILABLE"){
+            console.log(animal)
+            let headToShelter = document.createElement('h4')
+            headToShelter.innerHTML = `<a href="https://www.google.com/maps/place/${animal.shelter.address}">Adopt ${animal.name}?<a/>`
+            animalDetailsContainer.append(headToShelter)
+        } 
 
 
     })  

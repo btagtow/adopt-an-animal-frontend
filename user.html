@@ -12,24 +12,23 @@
     <header class="user-header"></header>
     <nav>
         <ul id="nav-bar">
-            <li id="home-page">Home Page</li>
-            <li id="browse-pets">Browse Available Pets</li>
-            <li id="colorado-shelters">Colorado Shelters</li>
-            <ul id="add-favorite"> Add Favorite
+            <li id="home-page" class="nav-item">Home Page</li>
+            <li id="browse-pets" class="nav-item">Browse Available Pets</li>
+            <li id="colorado-shelters" class="nav-item">Colorado Shelters</li>
+            <li id="add-favorite" class="nav-item"> Add Favorite
                 <form id="add-useranimal-form" method="POST" action="http://localhost:3000/user_animals" >
                     <input type="hidden" name="user_id" id="user_id">
                     <select name="animal_id" id="favorites-dropdown"></select>
                     <input type="submit">
                 </form>  
-                <!-- <form action="http://localhost:3000/users" method="POST" id="create-user" style="display: none";>
-                    <input type="text" name="name" placeholder="Name">
-                    <input type="text" name="email" placeholder="Email">
-                    <input type="submit">
-                </form> -->
-            </ul>
+            </li>
         </ul>
     </nav>
-    <section id="favorite-animals-container"></section>
+    <main>
+        <section id="favorite-animals-container">
+            <h3>Find more animals on the Browse Available Pets page</h1>
+        </section>
+    </main>
     <footer id="footer">
         <p>Created with <i class="fa fa-heart"></i></p>
         <p>By Evan Greer and Ben Tagtow</p>
