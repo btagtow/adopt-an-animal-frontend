@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
     <link rel="stylesheet" href="user.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>User Page</title>  
@@ -16,35 +15,20 @@
             <li id="home-page">Home Page</li>
             <li id="browse-pets">Browse Available Pets</li>
             <li id="colorado-shelters">Colorado Shelters</li>
-            <ul id="add-favorite">
-                <li id="new-user-form"><p id="new-user-p-tag">Add Favorites?</p></li>
-                <li>
-    
-                </li>  
+            <ul id="add-favorite"> Add Favorite
+                <form id="add-useranimal-form" method="POST" action="http://localhost:3000/user_animals" >
+                    <input type="hidden" name="user_id" id="user_id">
+                    <select name="animal_id" id="favorites-dropdown"></select>
+                    <input type="submit">
+                </form>  
+                <!-- <form action="http://localhost:3000/users" method="POST" id="create-user" style="display: none";>
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" name="email" placeholder="Email">
+                    <input type="submit">
+                </form> -->
             </ul>
         </ul>
     </nav>
-    <!-- <ul id="nav-bar">
-        <li id="home" class="nav-option">Home</li>
-        <ul id="new-user-nav" class="nav-option">New user?
-            <li id="new-user-form">
-                <form action="http://localhost:3000/users" method="POST" id="create-user" style="display: none";>
-                    <input type="text" name="name" placeholder="Name">
-                    <input type="text" name="email" placeholder="Email">
-                    <input type="submit" id="submit">
-                </form>
-            </li>
-        </ul>
-        <li id="current-users" class="nav-option">
-            Current Users
-                <section id="current-user-select" style="display:none">            
-                    <select name="name" id="user-dropdown"></select>
-                    <input type="submit" value="Go to user page" id="go-to-user-page">
-                </section>  
-        </li>
-        <li id="colorado-shelters" class="nav-option">Colorado Shelters</li>
-
-    </ul> -->
     <section id="favorite-animals-container"></section>
     <footer id="footer">
         <p>Created with <i class="fa fa-heart"></i></p>

@@ -93,6 +93,12 @@ li{
 #colorado-shelters{
     cursor: pointer;
 }
+
+#browse-pets-header{
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+
 #available-animal-container{
     display:flex;
 }
@@ -114,7 +120,6 @@ li{
 
 .animal-image{
     width: 600px;
-    /* height: 600px; */
 }
 
 .animal-image-container{

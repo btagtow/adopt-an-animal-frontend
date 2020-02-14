@@ -39,6 +39,31 @@ nav{
     width: 50%;
 }
 
+.animal-container{
+    display:flex; 
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-bottom: 30px;
+}
+
+.animal-details-container{
+    display:flex; 
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.animal-image{
+    width: 600px;
+}
+
+.animal-image-container{
+    display:flex; 
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
 #footer {
     display: flex;
     align-items: center;
