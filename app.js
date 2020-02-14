@@ -15,15 +15,37 @@ const currentUserSelectContainer = document.querySelector("#current-user-select-
 const shelterLink = document.querySelector("#colorado-shelters")
 const petsLink = document.querySelector("#browse-pets")
 
-fetch("http://localhost:3000/animals")
-    .then(response => response.json())
-    .then(animals => {
-        randomAnimal = animals[Math.floor(Math.random() * animals.length)]
-        displayAnimal(randomAnimal)
-    })
+document.addEventListener('DOMContentLoaded', () => {
+  newUserNav.addEventListener("click", () => {
+    hideElement(createUser)
+  })
+  currentUserLi.addEventListener("click", () => {
+    hideElement(currentUserSelect)
+  })
+  userPageButton.addEventListener("click", goToUserPage)
+  shelterLink.addEventListener('click', goToShelterPage)
+  petsLink.addEventListener('click', goToAvailablePets)
+  fetchAnimals()
+  fetchUsers()
+
+})
+
+
+function fetchAnimals(){
+
+  fetch("http://localhost:3000/animals")
+      .then(response => response.json())
+      .then(animals => {
+          randomAnimal = animals[Math.floor(Math.random() * animals.length)]
+          displayAnimal(randomAnimal)
+      })
+}
+
+
 
 
 function displayAnimal(animal) {
+    featuredAnimal.innerHTML = ""
     image = document.createElement("img")
     animalAge = document.createElement('h4')
     animalGender = document.createElement('h4')
@@ -40,19 +62,25 @@ function displayAnimal(animal) {
     featuredAnimalInfo.append(animalAge, animalGender, animalBreed)
 }
 
-fetch("http://localhost:3000/users")
-    .then(response => response.json())
-    .then(users => users.map(user=> {
-      let userOption = document.createElement('option')
-      userOption.innerText = user.name
-      userOption.value = user.id 
-      userDropDown.append(userOption)
+image.addEventListener('click', refreshAnimal())
 
-    }))
+function refreshAnimal(){
+  console.log()
+}
 
-userPageButton.addEventListener("click", goToUserPage)
-shelterLink.addEventListener('click', goToShelterPage)
-petsLink.addEventListener('click', goToAvailablePets)
+
+function fetchUsers(){
+
+  fetch("http://localhost:3000/users")
+      .then(response => response.json())
+      .then(users => users.map(user=> {
+        let userOption = document.createElement('option')
+        userOption.innerText = user.name
+        userOption.value = user.id 
+        userDropDown.append(userOption)
+  
+      }))
+}
 
 function goToUserPage(){
   window.location = `http://localhost:3001/user.html?id=${userDropDown.value}`
@@ -66,19 +94,11 @@ function goToAvailablePets(){
   window.location = `http://localhost:3001/pets.html`
 }
 
-newUserNav.addEventListener("click", () => {
-  hideElement(createUser)
-})
-
-currentUserLi.addEventListener("click", () => {
-  hideElement(currentUserSelect)
-})
-
-
 function hideElement(element) {
-    if (element.style.display === "none") {
-      element.style.display = "flex";
+    if (element.style.opacity === "0") {
+      element.style.opacity = "1";
     } else {
-      element.style.display = "none"
+      element.style.opacity = "0"
     }
 }
+

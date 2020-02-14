@@ -28,23 +28,22 @@
 
             <h2 id="featured-animal-h2"></h2>
             <section class="featured-animal-container">
-                <section id = "forms-container">
-                    <section id="current-user-select" style="display:none">
-                        Current User:
-                        <select name="name" id="user-dropdown"></select>
-                        <input type="submit" value="Go to user page" id="go-to-user-page">
-                    </section>  
-                    <li id="new-user-form"> 
-                        <form action="http://localhost:3000/users" method="POST" id="create-user" style="display: none";>New User: 
+                <section id = "forms-container" class = "featured-animal-section-item">
+                    <li id="new-user-form" class = "form"> 
+                        <form action="http://localhost:3000/users" method="POST" id="create-user" style="opacity: 0";>New User: 
                             <input type="text" name="name" placeholder="Name">
                             <input type="text" name="email" placeholder="Email">
                             <input type="submit">
                         </form>
                     </li>
+                    <section id="current-user-select" style="opacity:0" class = "form">
+                        Choose A User:
+                        <select name="name" id="user-dropdown"></select>
+                        <input type="submit" value="Go to user page" id="go-to-user-page">
+                    </section>  
                 </section>
-                <section id="featured-animal">
-                </section>
-                <section id="featured-animal-info"></section>
+                <section id="featured-animal" class = "featured-animal-section-item"></section>
+                <section id="featured-animal-info" class = "featured-animal-section-item"></section>
             </section>
 
                         

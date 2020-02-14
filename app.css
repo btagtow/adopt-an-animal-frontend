@@ -9,7 +9,6 @@ body{
 main{
     display:flex;
     flex-direction: column;
-    align-content: center;
     padding-bottom: 70px;
 
 }
@@ -18,7 +17,6 @@ main{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 15%;
     font-family: 'Montserrat', sans-serif;
 
     color: black;
@@ -27,12 +25,14 @@ main{
 #current-user-select{
     display:flex;
     flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem 1rem; 
+    box-sizing: border-box;
+
 }
 
 
-#sign-up-button{
-    margin-left: 10px;
-}
+
 .page-header{
     display: flex;
     justify-content: center;
@@ -60,7 +60,6 @@ li{
     margin-top:0px;
     padding-top:5px;
     margin-bottom: 0px;
-    height: 50px;
     padding-right: 5%;
 
 
@@ -70,6 +69,8 @@ li{
     width: 20%;
     text-align: center;
 }
+.nav-option:hover {background-color: darkgray;}
+
 
 
 #new-user-nav{
@@ -79,24 +80,33 @@ li{
 
 #forms-container{
     display:flex; 
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    margin-right: 10rem;
+
+
 }
 #new-user-form{
     display:flex;
-    color: white; 
-    text-align:center;
-}
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem 1rem; 
+    box-sizing: border-box;
 
+}
+.form{
+    width: 50%;
+}
 
 .featured-animal-container{
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     font-family: 'Montserrat', sans-serif;
+}
 
-
+.featured-animal-section-item{
+    width: 33%;
+    margin: 3rem;
 }
 
 #featured-animal{
@@ -120,7 +130,6 @@ li{
     display:flex; 
     flex-direction: column;
     padding-top: 2%;
-    margin-left: 10rem;
 }
 
 
